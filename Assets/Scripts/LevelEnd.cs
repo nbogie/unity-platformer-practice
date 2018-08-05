@@ -1,0 +1,15 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LevelEnd : MonoBehaviour {
+
+    private void OnTriggerEnter2D(Collider2D c)
+    {
+        Player player = c.gameObject.GetComponent<Player>();
+        if (player)
+        {
+            player.EndLevel();
+        }
+    }
+}
