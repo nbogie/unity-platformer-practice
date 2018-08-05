@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
     internal void TakeDamage(float damage)
     {
         shake.StartToShake(1f);
+        //TODO: restart level (e.g. water-level, etc)
         Respawn();
     }
 
