@@ -42,6 +42,11 @@ public class Player : MonoBehaviour
         rb.AddForce(Vector2.up * bounceAmount, ForceMode2D.Impulse);
     }
 
+    internal void TakeDamage(float damage)
+    {
+        Respawn();
+    }
+
     public void TeleportTo(Teleporter destination)
     {
         if (destination)
