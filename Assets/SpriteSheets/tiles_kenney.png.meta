@@ -3,19 +3,19 @@ guid: cd6d352062268422589b67e56b128d84
 TextureImporter:
   fileIDToRecycleName:
     21300000: tiles_kenney_0
-    21300002: tiles_kenney_1
-    21300004: tiles_kenney_2
-    21300006: tiles_kenney_3
-    21300008: tiles_kenney_4
+    21300002: water mid
+    21300004: unknown hardtosee
+    21300006: lava low
+    21300008: log bridge
     21300010: tiles_kenney_5
-    21300012: tiles_kenney_6
+    21300012: water high
     21300014: tiles_kenney_7
-    21300016: tiles_kenney_8
+    21300016: lava mid
     21300018: tiles_kenney_9
     21300020: tiles_kenney_10
     21300022: torch_unlit
     21300024: tiles_kenney_12
-    21300026: tiles_kenney_13
+    21300026: lava high
     21300028: tiles_kenney_14
     21300030: tiles_kenney_15
     21300032: torch_lit1
@@ -28,39 +28,39 @@ TextureImporter:
     21300046: tiles_kenney_23
     21300048: tiles_kenney_24
     21300050: tiles_kenney_25
-    21300052: tiles_kenney_26
+    21300052: button yellow on
     21300054: tiles_kenney_27
     21300056: tiles_kenney_28
     21300058: tiles_kenney_29
     21300060: tiles_kenney_30
-    21300062: tiles_kenney_31
+    21300062: button yellow off
     21300064: tiles_kenney_32
     21300066: tiles_kenney_33
     21300068: tiles_kenney_34
     21300070: tiles_kenney_35
-    21300072: tiles_kenney_36
+    21300072: button orange on
     21300074: tiles_kenney_37
     21300076: tiles_kenney_38
     21300078: exit sign
     21300080: tiles_kenney_40
-    21300082: tiles_kenney_41
+    21300082: button orange off
     21300084: tiles_kenney_42
     21300086: doortop_open
     21300088: tiles_kenney_44
-    21300090: tiles_kenney_45
-    21300092: tiles_kenney_46
+    21300090: button green on
+    21300092: keyhole yellow
     21300094: doorbase_open
-    21300096: tiles_kenney_48
-    21300098: tiles_kenney_49
-    21300100: tiles_kenney_50
+    21300096: bomb white
+    21300098: button green off
+    21300100: keyhole orange
     21300102: doortop_closed
-    21300104: tiles_kenney_52
-    21300106: tiles_kenney_53
-    21300108: tiles_kenney_54
+    21300104: bomb1
+    21300106: button blue on
+    21300108: keyhole green
     21300110: doorbase_closed
     21300112: window
-    21300114: tiles_kenney_57
-    21300116: tiles_kenney_58
+    21300114: button blue off
+    21300116: keyhole blue
     21300118: chain
     21300120: tiles_kenney_60
     21300122: bouncepad extended
@@ -70,8 +70,8 @@ TextureImporter:
     21300130: bouncepad retracted
     21300132: switch_mid
     21300134: tiles_kenney_67
-    21300136: tiles_kenney_68
-    21300138: tiles_kenney_69
+    21300136: water low
+    21300138: spikes
     21300140: switch_left
     21300142: tiles_kenney_71
   externalObjects: {}
@@ -176,7 +176,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_1
+      name: water mid
       rect:
         serializedVersion: 2
         x: 128
@@ -196,7 +196,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_2
+      name: unknown hardtosee
       rect:
         serializedVersion: 2
         x: 256
@@ -216,7 +216,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_3
+      name: lava low
       rect:
         serializedVersion: 2
         x: 384
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_4
+      name: log bridge
       rect:
         serializedVersion: 2
         x: 512
@@ -276,7 +276,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_6
+      name: water high
       rect:
         serializedVersion: 2
         x: 128
@@ -316,7 +316,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_8
+      name: lava mid
       rect:
         serializedVersion: 2
         x: 384
@@ -416,7 +416,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_13
+      name: lava high
       rect:
         serializedVersion: 2
         x: 384
@@ -676,7 +676,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_26
+      name: button yellow on
       rect:
         serializedVersion: 2
         x: 128
@@ -776,7 +776,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_31
+      name: button yellow off
       rect:
         serializedVersion: 2
         x: 128
@@ -876,7 +876,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_36
+      name: button orange on
       rect:
         serializedVersion: 2
         x: 128
@@ -976,7 +976,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_41
+      name: button orange off
       rect:
         serializedVersion: 2
         x: 128
@@ -1056,7 +1056,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_45
+      name: button green on
       rect:
         serializedVersion: 2
         x: 128
@@ -1076,7 +1076,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_46
+      name: keyhole yellow
       rect:
         serializedVersion: 2
         x: 256
@@ -1116,7 +1116,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_48
+      name: bomb white
       rect:
         serializedVersion: 2
         x: 0
@@ -1136,7 +1136,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_49
+      name: button green off
       rect:
         serializedVersion: 2
         x: 128
@@ -1156,7 +1156,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_50
+      name: keyhole orange
       rect:
         serializedVersion: 2
         x: 256
@@ -1196,7 +1196,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_52
+      name: bomb1
       rect:
         serializedVersion: 2
         x: 0
@@ -1216,7 +1216,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_53
+      name: button blue on
       rect:
         serializedVersion: 2
         x: 128
@@ -1236,7 +1236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_54
+      name: keyhole green
       rect:
         serializedVersion: 2
         x: 256
@@ -1296,7 +1296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_57
+      name: button blue off
       rect:
         serializedVersion: 2
         x: 128
@@ -1316,7 +1316,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_58
+      name: keyhole blue
       rect:
         serializedVersion: 2
         x: 256
@@ -1516,7 +1516,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_68
+      name: water low
       rect:
         serializedVersion: 2
         x: 0
@@ -1536,7 +1536,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles_kenney_69
+      name: spikes
       rect:
         serializedVersion: 2
         x: 128
