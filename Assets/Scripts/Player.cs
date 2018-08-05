@@ -9,16 +9,30 @@ public class Player : MonoBehaviour
     [SerializeField]
     Transform respawnPoint = null;
 
-    Rigidbody2D rb;
+    [SerializeField]
+    private AudioClip teleportClip;
+
+    [SerializeField]
+    private AudioClip dieClip;
+
+    private AudioSource audioSrc;
+
+    private MessageDisplayer msgDisplayer;
+
+    private Rigidbody2D rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioSrc = GetComponent<AudioSource>();
+        GameObject go = GameObject.Find("MessageText");
+        msgDisplayer = go.GetComponent<MessageDisplayer>();
     }
 
 
     public void Respawn()
     {
+        AudioSource.PlayClipAtPoint(dieClip, transform.position, 1f);
         InternalTeleportTo(respawnPoint);
     }
 
@@ -26,6 +40,7 @@ public class Player : MonoBehaviour
     {
         if (destination)
         {
+            AudioSource.PlayClipAtPoint(teleportClip, transform.position, 1f);
             InternalTeleportTo(destination.transform);
         }
         else
