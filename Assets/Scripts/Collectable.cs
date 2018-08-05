@@ -21,7 +21,7 @@ public class Collectable : MonoBehaviour
             InventorySystem invSys = collision.GetComponent<InventorySystem>();
             if (invSys)
             {
-                Debug.Log("Collected " + name + ": " + collectableName);
+                //Debug.Log("Collected " + name + ": " + collectableName);
                 invSys.IncrementCountOf(collectableName);
                 AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
                 Destroy(gameObject);

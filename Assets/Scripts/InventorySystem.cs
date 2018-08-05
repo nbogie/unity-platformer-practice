@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,7 +21,7 @@ public class InventorySystem : MonoBehaviour
         Debug.Log(ReportContents());
     }
 
-    void Start()
+    void Awake()
     {
         thingCount = new Dictionary<string, int>();
     }
@@ -63,8 +64,17 @@ public class InventorySystem : MonoBehaviour
 
     }
 
-
-
-
-
+    public bool ContainsAtLeastOne(string key)
+    {
+        
+        int n;
+        if (thingCount.TryGetValue(key, out n))
+        {
+            return n > 0;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

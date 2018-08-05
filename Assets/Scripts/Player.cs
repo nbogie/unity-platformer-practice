@@ -60,8 +60,7 @@ public class Player : MonoBehaviour
 
     public void EndLevel()
     {
-        Debug.Log("End level!");
-        Debug.Log("Active Scene name: " + SceneManager.GetActiveScene().name + " buildIndex:" + SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("End level!  Active Scene name: " + SceneManager.GetActiveScene().name + " buildIndex:" + SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
