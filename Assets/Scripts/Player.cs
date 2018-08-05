@@ -36,6 +36,12 @@ public class Player : MonoBehaviour
         InternalTeleportTo(respawnPoint);
     }
 
+    internal void BounceUp(float bounceAmount)
+    {
+        //TODO: this probably has to go through the character controller script's movement system.
+        rb.AddForce(Vector2.up * bounceAmount, ForceMode2D.Impulse);
+    }
+
     public void TeleportTo(Teleporter destination)
     {
         if (destination)
