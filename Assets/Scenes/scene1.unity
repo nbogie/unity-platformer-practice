@@ -3946,6 +3946,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 114176692146498994, guid: e82f3c875af05401993cac15232e16a0,
+        type: 2}
+      propertyPath: UnlockingItemName
+      value: KeyYellow
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e82f3c875af05401993cac15232e16a0, type: 2}
   m_IsPrefabAsset: 0

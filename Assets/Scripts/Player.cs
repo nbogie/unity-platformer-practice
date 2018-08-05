@@ -19,10 +19,14 @@ public class Player : MonoBehaviour
 
     private MessageDisplayer msgDisplayer;
 
+
     private Rigidbody2D rb;
 
+    private CameraShake shake;
     void Start()
     {
+        shake = Camera.main.GetComponent<CameraShake>();
+
         rb = GetComponent<Rigidbody2D>();
         audioSrc = GetComponent<AudioSource>();
         GameObject go = GameObject.Find("MessageText");
@@ -44,6 +48,7 @@ public class Player : MonoBehaviour
 
     internal void TakeDamage(float damage)
     {
+        shake.StartToShake(1f);
         Respawn();
     }
 
