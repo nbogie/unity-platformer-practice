@@ -175,7 +175,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectableName: Gold
-  audioSource: {fileID: 0}
 --- !u!212 &212392361266752858
 SpriteRenderer:
   m_ObjectHideFlags: 1
