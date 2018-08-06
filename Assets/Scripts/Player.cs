@@ -19,22 +19,34 @@ public class Player : MonoBehaviour
 
     private MessageDisplayer msgDisplayer;
 
+    [SerializeField]
+    private int startingLives;
+
 
     private Rigidbody2D rb;
+    private int lives;
+    private LivesDisplay livesDisplay;
 
     private CameraShake shake;
     void Start()
     {
+        lives = startingLives;
         shake = Camera.main.GetComponent<CameraShake>();
 
         rb = GetComponent<Rigidbody2D>();
         audioSrc = GetComponent<AudioSource>();
-        GameObject go = GameObject.Find("MessageText");
-        msgDisplayer = go.GetComponent<MessageDisplayer>();
+
+        livesDisplay = FindObjectOfType<LivesDisplay>();
+        msgDisplayer = FindObjectOfType<MessageDisplayer>();
+        if (!livesDisplay)
+        {
+            throw new UnityException("Can't find livesDisplay");
+        }
+        livesDisplay.DisplayLives(lives);
     }
 
 
-    public void Respawn()
+    private void Respawn()
     {
         AudioSource.PlayClipAtPoint(dieClip, transform.position, 1f);
         InternalTeleportTo(respawnPoint);
@@ -50,9 +62,22 @@ public class Player : MonoBehaviour
     {
         shake.StartToShake(1f);
         //TODO: restart level (e.g. water-level, etc)
-        Respawn();
+        Die();
     }
 
+    private void Die()
+    {
+        lives--;
+        livesDisplay.DisplayLives(lives);
+        if (lives > 0)
+        {
+            Respawn();
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOverLoseScene");                
+        }
+    }
     public void TeleportTo(Teleporter destination)
     {
         if (destination)

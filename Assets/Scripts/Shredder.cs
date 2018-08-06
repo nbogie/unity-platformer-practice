@@ -9,7 +9,7 @@ public class Shredder : MonoBehaviour {
         Player player = coll.gameObject.GetComponent<Player>();
         if (player)
         {
-            player.Respawn();
+            player.TakeDamage(1000000);
         }
     }
 }
