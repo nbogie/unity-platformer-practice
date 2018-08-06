@@ -6,8 +6,13 @@ using UnityEngine;
 public class InventorySystem : MonoBehaviour
 {
 
-    Dictionary<string, int> thingCount;
+    private Dictionary<string, int> thingCount;
+    private InventoryDisplay inventoryDisplay;
 
+    private void Start()
+    {
+     inventoryDisplay = FindObjectOfType<InventoryDisplay>();
+    }
     void TestIt()
     {
         IncrementCountOf("potato");
@@ -50,6 +55,8 @@ public class InventorySystem : MonoBehaviour
         {
             thingCount.Add(itemName, 1);
         }
+
+        inventoryDisplay.DisplayInventory(this);
     }
 
     public string ReportContents()
