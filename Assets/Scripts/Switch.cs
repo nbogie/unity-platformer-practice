@@ -6,6 +6,7 @@ public class Switch : MonoBehaviour
 {
 
     private bool isOn;
+    private bool triggered;
 
     [SerializeField]
     private Sprite spriteLeft;
@@ -44,7 +45,27 @@ public class Switch : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ToggleSwitch();
+        Player player = collision.GetComponent<Player>();
+        if (player)
+        {
+            if (!triggered)
+            {
+
+                ToggleSwitch();
+                triggered = true;
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Player player = collision.GetComponent<Player>();
+        if (player)
+        {
+            if (triggered)
+            {
+                triggered = false;
+            }
+        }
     }
     void ToggleSwitch()
     {

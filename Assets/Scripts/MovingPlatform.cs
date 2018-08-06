@@ -3,6 +3,8 @@ public class MovingPlatform : MonoBehaviour
 {
     private bool shouldMove;
 
+    private bool triggered;
+
     [SerializeField]
     private float maxDistanceDelta;
 
@@ -57,8 +59,13 @@ public class MovingPlatform : MonoBehaviour
         Player p = collision.gameObject.GetComponent<Player>();
         if (p)
         {
-            p.gameObject.transform.SetParent(transform);
-            shouldMove = true;
+            if (!triggered)
+            {
+
+                p.gameObject.transform.SetParent(transform);
+                shouldMove = true;
+                triggered = true;
+            }
         }
     }
 
@@ -69,8 +76,12 @@ public class MovingPlatform : MonoBehaviour
         Player p = collision.gameObject.GetComponent<Player>();
         if (p)
         {
-            p.gameObject.transform.SetParent(null);
-            shouldMove = false;
+            if (triggered)
+            {
+                p.gameObject.transform.SetParent(null);
+                shouldMove = false;
+                triggered = false;
+            }
         }
     }
 

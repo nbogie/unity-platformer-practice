@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Wasp : MonoBehaviour
 {
+    private bool triggered;
+
     [SerializeField]
     private float maxDistanceDelta;
 
@@ -54,14 +56,30 @@ public class Wasp : MonoBehaviour
     {
         return (Vector2.Distance(transform.position, destination) < 0.5f);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
+    {        
+        Player player = collision.GetComponent<Player>();
+        if (player)
+        {
+            if (!triggered)
+            {
+                player.TakeDamage(damage);
+                //Destroy(gameObject);
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
     {
         Player player = collision.GetComponent<Player>();
         if (player)
         {
-            player.TakeDamage(damage);
-            //Destroy(gameObject);
+            if (triggered)
+            {
+                triggered = false;
+            }
         }
+
     }
 }
 

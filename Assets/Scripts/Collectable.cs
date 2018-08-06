@@ -8,7 +8,7 @@ public class Collectable : MonoBehaviour
 
     private AudioSource audioSource;
 
-
+    private bool triggered;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -21,13 +21,17 @@ public class Collectable : MonoBehaviour
             InventorySystem invSys = collision.GetComponent<InventorySystem>();
             if (invSys)
             {
-                //Debug.Log("Collected " + name + ": " + collectableName);
-                invSys.IncrementCountOf(collectableName);
-                AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
-                Destroy(gameObject);
+                if (!triggered)
+                {
+                    //Debug.Log("Collected " + name + ": " + collectableName);
+                    invSys.IncrementCountOf(collectableName);
+                    AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
+                    Destroy(gameObject);
+                    triggered = true;
+                }
             }
 
         }
     }
-
+    //NOTE: no untrigger - once-only triggerable
 }

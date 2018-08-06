@@ -12,8 +12,7 @@ public class ReadableSign : MonoBehaviour
 
     void Start()
     {
-        GameObject go = GameObject.Find("MessageText");
-        msgDisplayer = go.GetComponent<MessageDisplayer>();
+        msgDisplayer = FindObjectOfType<MessageDisplayer>();
 
     }
 
