@@ -2,6 +2,7 @@
 
 ## Suggested implementation Order
 
+```
 10  terrain
 13  character control
 15  decorative, non-blocking terrain features
@@ -31,7 +32,7 @@
 230 Obstacle: animated blades
 240 Obstacle: rotating death trap
 250 Obstacle: crumbling platforms
-
+```
 
 
 ## Credits
